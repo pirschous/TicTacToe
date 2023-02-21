@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
         //This function plays placement sound.
         audio('./media/morse-code.mp3');
         //This condition checks to see if it is the computers turn. 
-        if (activePlayer === '0') {
+        if (activePlayer === 'O') {
             //This function disables clicking for computers turn.
             disableClick();
             //This function waits 1 second before the computer places an image and enables click. 
@@ -88,7 +88,7 @@ function checkWinConditions() {
     // 0 0, 1, 2 condition. 
     else if (arrayIncludes('0O', '1O', '2O')) { drawWinLine(50, 100, 558, 100) }
     // O 3, 4, 5 condition. 
-    else if (arrayIncludes('3O', '40', '50')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3O', '4O', '5O')) { drawWinLine(50, 304, 558, 304) }
     // O 6, 7, 8 condition.
     else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50, 508, 558, 508) }
     // O 0, 3, 6 condition.
